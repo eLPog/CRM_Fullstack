@@ -1,0 +1,153 @@
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.menuContainer {
+
+    border:1px solid blue;
+    margin:5px;
+    padding: 10px;
+    background-color: khaki;
+    display: flex;
+    justify-content: center;
+}
+
+.addFormular {
+    border:2px solid black;
+    padding:20px;
+    display: flex;
+    justify-content: center;
+}
+
+.error {
+    background-color: pink;
+    font-weight: bold;
+}
+button {
+    padding: 5px 10px;
+    background-color: cornflowerblue;
+    font-weight: bold;
+    color:white;
+    margin-top:5px
+}
+button a {
+    text-decoration: none;
+    color:white;
+}
+.button-add {
+    padding:5px 10px;
+    background-color: forestgreen;
+    font-weight: bold;
+    margin-top: 3px;
+    color:white;
+}
+.button-cancel {
+    padding:5px 10px;
+    background-color: coral;
+    font-weight: bold;
+    margin-top: 3px;
+    color:white;
+}
+
+.button-delete {
+    padding:5px 10px;
+    background-color: red;
+    font-weight: bold;
+    margin-top: 3px;
+    color:white;
+}
+.button-option {
+    padding:5px 10px;
+    background-color: darkseagreen;
+    font-weight: bold;
+    margin-top: 3px;
+    color: white;
+}
+.button-save {
+    padding:5px 10px;
+    background-color: green;
+    font-weight: bold;
+    margin-top: 3px;
+    color:white;
+}
+
+
+.menuContainer a {
+    padding:4px;
+    text-decoration: none;
+    color:darkblue;
+    border:1px solid green;
+    margin: 4px
+}
+thead tr th {
+    color:red;
+    background-color: darkseagreen;
+    border-top:1px solid black;
+}
+tbody tr th {
+    border-bottom:1px solid darkseagreen;
+}
+table {
+    text-align: left;
+    width:80%;
+    margin: 0 auto;
+
+}
+td, th {
+    padding:6px;
+    margin:2px;
+    background-color: white;
+    width: 200px;
+}
+td:nth-child(even){
+    background-color: #d8deff ;
+}
+td:nth-child(odd){
+    background-color: beige;
+}
+.oneCompanyTable {
+    width:450px
+}
+.oneCompanyTable thead tr th {
+    background-color: cornflowerblue;
+    color:white;
+    font-weight: bold;
+}
+.oneCompanyTable tbody tr th {
+    background-color: powderblue;
+
+}
+.table-transactions{
+    padding:6px;
+    margin:2px;
+    background-color: white;
+    width: 80%;
+}
+.table-transactions tbody tr th, .table-transactions thead tr th, .table-transactions tbody tr td  {
+    border-bottom:1px solid darkblue;
+}
+.table-transactions thead tr th {
+    background-color: powderblue;
+    color:darkblue;
+}
+.financialSummary {
+    border:1px solid powderblue;
+    width:50%;
+    font-weight: bolder;
+}
+.home {
+    font-family: "Bodoni MT";
+    font-size: larger;
+}
+.home ul {
+    list-style-type: none;
+    color:blue;
+    border:1px solid blue;
+
+}
+.home a {
+    text-decoration: none;
+    color: yellowgreen;
+}

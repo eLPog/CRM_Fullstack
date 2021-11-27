@@ -1,0 +1,47 @@
+<h3>Add new transaction with the {{company.name}} company.</h3>
+<form method="post">
+    <fieldset>
+        <legend>Add new transaction</legend>
+       <b>Type of transaction </b> <br><br>
+        <input type="radio" id="purchase" name="transactionType" value="Purchase" required>
+        <label for="purchase">Purchase</label>
+        <input type="radio" id="sale" name="transactionType" value="Sale" required>
+        <label for="Sale">Sale</label><br>
+
+
+<br>
+        <label for="tName"><b>  Transaction name</b></label><br>
+        <input type="text" id="tName" name="transactionName" required><br>
+
+        <label for="sumEuro"><b>Transaction sum</b></label><br>
+        <input type="number" id="sumEuro" name="sumEuro" placeholder="euro" min="1" max="99999999" required>
+
+<label for="sumCent"></label>
+        <input type="number" id="sumCent" name="sumCent" placeholder="cent" min="0" max="99">
+
+        <br><br>
+        <b>Payment method </b> <br>
+        <input type="radio" id="cash" name="paymentMethod" value="Cash" required>
+        <label for="cash">Cash</label>
+        <input type="radio" id="transfer" name="paymentMethod" value="Transfer" required>
+        <label for="transfer">Transfer</label><br>
+        <br>
+
+        <label for="description"><b>Description</b></label><br>
+        <textarea id="description" name="description"> </textarea>
+
+        <br><br>
+
+        <label for="transactionDate"><b>Date of transaction</b></label><br>
+        <input type="date" name="transactionDate">
+             <br><br>
+        <label for="transactionAddedBy"><b>Added by</b></label><br>
+        <input type="email" id="transactionAddedBy" name="transactionAddedBy" value="{{user}}" readonly disabled>
+        <br><br>
+        <input type="reset" value="Reset">
+        <br><br>
+        <button class="button-add" type="submit">Add</button>
+        <button class="button-cancel"><a href="/admin/get/{{company._id}}">Cancel</a></button>
+
+    </fieldset>
+</form>

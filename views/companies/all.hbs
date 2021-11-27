@@ -1,0 +1,33 @@
+<h2>All companies in database</h2>
+
+<table>
+    <thead>
+    <tr>
+        <th>
+            Company name
+        </th>
+        <th>
+            Employee
+        </th>
+        <th>
+            Details
+        </th>
+    </tr>
+    </thead>
+{{#each companies}}
+    <tbody>
+    <tr>
+        <th>
+        {{this.name}}
+        </th>
+        <td>
+            {{this.assignedPerson}}
+        </td>
+        <td>
+            <button class="button-option"><a href="get/{{this._id}}">Details</a></button>
+            <a href="/admin/get/{{this._id}}/transactions"><button class="button-option">Transactions</button></a>
+        </td>
+    </tr>
+    </tbody>
+{{/each}}
+</table>

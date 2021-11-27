@@ -1,0 +1,109 @@
+<b>Transactions</b>
+<h2>{{company.name}}</h2>
+
+
+
+
+<div>
+
+
+    <table class="table-transactions">
+
+        <thead>
+        <tr>
+            <th>
+                Transaction Type
+            </th>
+            <th>
+                Transaction name
+            </th>
+            <th>
+                transaction amount
+            </th>
+            <th>
+                Payment method
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Transaction date
+            </th>
+            <th>
+                Added by
+            </th>
+            <th>
+                Options
+            </th>
+        </tr>
+        </thead>
+        {{#each company.transactions}}
+        <tbody>
+        <tr>
+            <th>
+                {{this.transactionType}}
+            </th>
+            <th>
+                {{this.transactionName}}
+            </th>
+            <td>
+                {{this.sum}} €
+            </td>
+            <td>
+                {{this.paymentMethod}}
+            </td>
+            <td>
+                {{this.description}}
+            </td>
+            <td>
+                {{this.transactionDate}}
+            </td>
+            <td>
+                {{this.addedBy}}
+            </td>
+            <td>
+                <a href="/admin/get/{{@root.company._id}}/transactions/{{this.transactionId}}"><button class="button-option">Details</button></a>
+
+                <a href="/admin/get/{{@root.company._id}}/transactions/delete/{{this.transactionId}}"><button class="button-delete">Delete</button></a>
+
+            </td>
+        </tr>
+        </tbody>
+        {{/each}}
+    </table>
+
+</div><br>
+<hr>
+<center>
+    <b>Financial summary with {{company.name}} company</b>
+<div class="financialSummary">
+
+    <p>
+        Profits: {{profits company.transactions}} €
+    </p>
+    <p>
+        Expenses:  {{expenses company.transactions}} €
+    </p>
+    <hr>
+  <p>
+      Summary: {{summary (profits company.transactions) (expenses company.transactions)}} €
+  </p>
+
+</div>
+</center>
+<br>
+<div>
+
+
+<button>
+    <a href="/admin/get/{{company._id}}/transactions/add">Add new transaction</a>
+</button>
+<br>
+<button>
+    <a href="/admin/get/{{company._id}}">Company profile</a>
+</button>
+<br>
+<button>
+    <a href="/admin/all">Companies list</a>
+</button>
+</div>

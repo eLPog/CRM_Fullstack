@@ -1,0 +1,63 @@
+<h2>Edit {{company.name}}</h2>
+<form method="post" action="/admin/edit/{{company._id}}">
+<table  class="oneCompanyTable">
+<thead>
+<tr>
+    <th>Info</th>
+    <th>Value</th>
+</tr>
+    {{#with company}}
+
+        <tbody>
+        <tr>
+            <th>Company name</th>
+            <td><input type="text" value="{{name}}" name="name" required></td>
+        </tr>
+        <tr>
+            <th>Address</th>
+            <td><input type="text" value="{{address}}" name="address"></td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td><input type="email" value="{{email}}" name="email"></td>
+        </tr>
+        <tr>
+            <th>Phone</th>
+            <td><input type="number" value="{{phone}}" name="phone"></td>
+        </tr>
+        <tr>
+            <th>Assigned employee</th>
+            <td><input type="text" value="{{assignedPerson}}" name="assignedPerson"></td>
+        </tr>
+        <tr>
+            <th>Notes</th>
+            <td><textarea name="notes">{{notes}}</textarea></td>
+        </tr>
+        <tr>
+            <th>Contact Person</th>
+            <td><input type="text" value="{{contactPerson}}" name="contactPerson"></td>
+        </tr>
+        <tr>
+            <th>Added By</th>
+            <td><input type="text" value="{{addedBy}}" name="addedBy"></td>
+        </tr>
+        <tr>
+            <th>created</th>
+            <td><input type="text" value="{{created}}" name="created" readonly disabled></td>
+        </tr>
+        <tr>
+            <th>Edit description</th>
+            <td><textarea name="editDescription" placeholder="Describe what has been edited" required></textarea></td>
+        </tr>
+        <tr>
+            <th>Options</th>
+            <td><button class="button-save" type="submit">Save</button><button class="button-cancel"><a href="/admin/get/{{_id}}">Cancel</a></button></td>
+        </tr>
+        </tbody>
+    {{/with}}
+    </thead>
+
+</table>
+</form>
+    <br><br>
+{{>goBack}}

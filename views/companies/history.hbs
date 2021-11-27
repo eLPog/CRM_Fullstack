@@ -1,0 +1,31 @@
+    Edit history <b>{{name}}</b>.
+<table>
+    <thead>
+    <tr>
+        <th>user</th>
+        <th>Date</th>
+        <th>Edit description</th>
+    </tr>
+    </thead>
+{{#each history}}
+
+        <tbody>
+        <tr>
+            <td>
+                {{this.name}}
+            </td>
+            <td>
+                {{this.date}}
+            </td>
+            <td>
+                {{this.editDescription}}
+            </td>
+        </tr>
+        </tbody>
+{{/each}}
+    </table>
+    <div>
+        <button>
+            <a href="/admin/get/{{id}}">Show profile</a>
+        </button>
+    </div>

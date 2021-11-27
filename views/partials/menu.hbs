@@ -1,0 +1,15 @@
+<div class="menuContainer">
+
+        <a href="/">Home</a>
+    {{#unless user}}
+        <a href="/login">Log in</a>
+        <a href="/registration">Sign in</a>
+    {{/unless}}
+ {{#if user}}
+     <a href="/admin/all">Companies list</a>
+     <a href="/admin/add">Add Company</a>
+ <a href="/admin/profile">My profile</a>
+ <a href="/logout">Logout</a>
+ {{/if}}
+
+</div>

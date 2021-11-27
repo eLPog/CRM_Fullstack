@@ -1,0 +1,54 @@
+<h2>{{company.name}}</h2>
+
+<table>
+<thead>
+<tr>
+    <th>Info</th>
+    <th>Value</th>
+</tr>
+    {{#with transaction}}
+
+        <tbody>
+        <tr>
+            <th>Transaction Type</th>
+            <td>{{transactionType}}</td>
+        </tr>
+        <tr>
+            <th>Transaction name</th>
+            <td>{{transactionName}}</td>
+        </tr>
+        <tr>
+            <th>Amount</th>
+            <td>{{sum}}</td>
+        </tr>
+        <tr>
+            <th>Payment method</th>
+            <td>{{paymentMethod}}</td>
+        </tr>
+        <tr>
+            <th>Description</th>
+            <td>{{description}}</td>
+        </tr>
+        <tr>
+            <th>Transaction date</th>
+            <td>{{transactionDate}}</td>
+        </tr>
+        <tr>
+            <th>Added by</th>
+            <td>{{addedBy}}</td>
+        </tr>
+
+        <tr>
+            <th>Options</th>
+            <td><a href="/admin/get/{{@root.company._id}}/transactions/delete/{{transactionId}}"><button class="button-delete">Delete</button></a></td>
+        </tr>
+        </tbody>
+    {{/with}}
+
+
+</table><br><br>
+<div>
+    <button>
+        <a href="/admin/get/{{company._id}}/transactions">All transactions</a>
+    </button>
+</div>

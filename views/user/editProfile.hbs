@@ -1,0 +1,66 @@
+<h2>Your account</h2>
+<p>Hello {{user.name}}</p>
+<table>
+    <thead>
+    <tr>
+        <th>
+            Key
+        </th>
+        <th>
+            Property
+        </th>
+    </tr>
+    </thead>
+    {{#with user}}
+        <form method="post" action="/admin/profile/{{_id}}">
+        <tbody>
+        <tr>
+            <th>
+                Name
+            </th>
+            <td>
+                <input type="text" name="name" value="{{name}}">
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Email
+            </th>
+            <td>
+                <input type="email" name="email" value="{{email}}">
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Phone
+            </th>
+            <td>
+                {{#if number}}
+                    <input type="number" name="phone" value="{{phone}}">
+                {{/if}}
+                {{#unless number}}
+                    <input type="number" name="phone" value="{{phone}}">
+                {{/unless}}
+
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Notes
+            </th>
+            <td>
+                <textarea name="notes">{{notes}}</textarea>
+            </td>
+        </tr>
+        <tr>
+            <th>Options</th>
+            <td><button class="button-save" type="submit">Save</button><button class="button-cancel"><a href="/admin/profile">Cancel</a></button></td>
+        </tr>
+        </tbody>
+
+        </form>
+    {{/with}}
+</table>
+<p>Note that you must log in again when changing your email address</p>
+<br><br>
+{{>goBack}}

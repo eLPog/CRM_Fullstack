@@ -1,0 +1,71 @@
+<h2>{{company.name}}</h2>
+
+<table  class="oneCompanyTable">
+    <thead>
+    <tr>
+        <th>Info</th>
+        <th>Value</th>
+    </tr>
+    {{#with company}}
+
+    <tbody>
+<tr>
+    <th>Company name</th>
+    <td>{{name}}</td>
+</tr>
+<tr>
+    <th>Address</th>
+    <td>{{address}}</td>
+</tr>
+<tr>
+    <th>Email</th>
+    <td><a href=mailto:{{email}}">{{email}}</a></td>
+</tr>
+<tr>
+    <th>Phone</th>
+    <td>{{phone}}</td>
+</tr>
+<tr>
+    <th>Assigned employee</th>
+    <td>{{assignedPerson}}</td>
+</tr>
+<tr>
+    <th>Notes</th>
+    <td>{{notes}}</td>
+</tr>
+<tr>
+    <th>Contact Person</th>
+    <td>{{contactPerson}}</td>
+</tr>
+<tr>
+    <th>Added By</th>
+    <td>{{addedBy}}</td>
+</tr>
+<tr>
+    <th>Created at</th>
+    <td>{{created}}</td>
+</tr>
+<tr>
+    <th>Last update</th>
+    <td>{{@root.lastEdit.date}}</td>
+</tr>
+<tr>
+    <th>Transactions</th>
+    <td><a href="/admin/get/{{_id}}/transactions"><button class="button-option">Show transactions</button></a></td>
+</tr>
+<tr>
+    <th>Options</th>
+    <td><a href="../edit/{{_id}}"><button class="button-option">Edit</button></a><a href="../history/{{_id}}"><button class="button-option">History</button></a>
+        <a href="../delete/confirm/{{_id}}"><button class="button-delete">Delete</button></a>
+    </td>
+</tr>
+</tbody>
+    {{/with}}
+
+
+</table><br><br>
+    <div>
+        <button>
+            <a href="/admin/all">Companies list</a>
+        </button>
+    </div>

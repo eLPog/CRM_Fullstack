@@ -1,0 +1,48 @@
+
+
+    <div class="home">
+        {{#if user}}
+            <b> You are logged als {{user}}</b>
+        {{/if}}
+        {{#unless user}}
+            <p>You must be logged in to use the application</p>
+            <p>If you don't have an account yet, please use the <a href="/registration">new user registration form</a></p>
+        {{/unless}}
+        <p>
+            The application is the base of companies.
+        </p>
+        <ul>
+            The logged user has the ability to:
+            <li>
+                add companies
+            </li>
+            <li>
+                edit companies
+            </li>
+            <li>
+                delete companies
+            </li>
+            <li>
+                add financial transactions to companies
+            </li>
+            <li>
+                check the financial status in relations with a specific company
+            </li>
+            <li>
+                track the history of changes in the company's edition
+            </li>
+        </ul>
+
+    <p>
+
+    </p>
+    <p>
+        The user has the option to change the password, reset it and delete his account.
+    </p>
+    <p>
+        Have a nice use
+    </p>
+
+    </div>
+
+{{message}}
