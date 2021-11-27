@@ -25,5 +25,5 @@ From there, we have access to the transactions carried out with this company, ed
 
 Transaction list: We can enter transactions made with a given company. In the list 'transaction list' view, we can see a summary of financial operations with a given company.
 
-
+You can try this app on https://project2simplecrm.herokuapp.com  email to login:test@test.pl   password: test123
 
