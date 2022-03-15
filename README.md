@@ -1,4 +1,4 @@
-# Project_2_crm
+# CRM 
 
 Simple Customer relationship management
 
