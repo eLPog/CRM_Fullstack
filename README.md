@@ -6,15 +6,13 @@ This application allows you to add, edit and delete companies, add financial tra
 
 The data is saved in mongooseDB
 
-I tried to use OOP programming.
-
-Simply frontend serving only to show the logical operations (handlebars)
+Simply frontend (handlebars) serving only to show the logical operations 
 
 Only registered users can use the database.
 
 In the event that the user forgets the password, he can reset it and then log in with the randomly assigned password to change it back to his own.
  
-The user can of course delete his data from the database.
+The user can delete his data from the database.
 
 Each user, company and transaction have their own unique id.
 
@@ -25,5 +23,6 @@ From there, we have access to the transactions carried out with this company, ed
 
 Transaction list: We can enter transactions made with a given company. In the list 'transaction list' view, we can see a summary of financial operations with a given company.
 
-You can try this app on https://project2simplecrm.herokuapp.com  email to login:test@test.pl   password: test123
+You can try this app on https://project2simplecrm.herokuapp.com  email to login:test@test.pl   password: test123 
+or You can create your own new Account. Passwords are hashed. 
 
